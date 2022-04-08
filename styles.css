@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Raleway:wght@700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{ 
+    background-color: #590d22;
+    font-family: 'Merriweather', serif;
+    /* overflow-x: hidden; */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+.wrapper{
+    position: relative;
+    margin-left: 140px;
+}
+.wrapper:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.1rem;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #fff, transparent);
+}
+header{
+    width: calc(100% - 280px);
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+.logo{
+    position: absolute;
+    z-index: 9;
+}
+/* .logo img{
+    width: 100%;
+} */
+.menu{
+    background-color: #ffb3c1;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all ease 0.7s;
+}
+.menu ul{
+    float: right;
+    margin-right: 60px;
+    opacity: 0;
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    line-height: 100px;
+}
+.menu ul li a{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 120%;
+    height: 100%;
+    background-color: #0003;
+    z-index: -1;
+    transform: skewX(-20deg) scaleY(0);
+    transform-origin: top;
+    transition: all ease 0.5s;
+}
+.menu ul li a:hover:before{
+    transform: skewX(-20deg) scaleY(1);
+}
+header:hover .menu{
+    transform: scaleX(1);
+}
+header:hover .menu ul{
+    opacity: 1;
+    transition: all ease 1s 0.5s;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    color: #fff;
+}
+.content .text{
+    max-width: 55%;
+    padding: 0 0 0 50px;
+}
+.content h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color:#ffb3c1;
+}
+.content p{
+    max-width: 70%;
+    font-size: 16px;
+    line-height: 26px;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    height: 90px;
+    line-height: 90px;
+    padding-left: 110px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 60px;
+    opacity: 0.5;
+    transition: all ease 0.5s;
+}
+.btn:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 87px;
+    height: 87px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: url(strzalka.png) no-repeat;
+    background-size: 60px;
+    background-position: center;
+    transition: all ease 0.5s;
+}
+.btn:hover{
+    opacity: 1;
+    padding: 0 60px 0 40px;
+    font-size: 18px;
+}
+.btn:hover:before{
+    border-radius: 50px;
+    width: 100%;
+    background-position: 195px center;
+}
+.social{
+    position: absolute;
+    bottom: 50px;
+}
+.social a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 30px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    transition: all ease 0.5s;
+}
+.social a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all ease 0.5s 0.3s;
+}
+.social a:hover{
+    transform: translateY(-10px);
+}
+.social a:hover:before{
+    transform: scaleX(1);
+}
+.video{
+   position: absolute;
+   right: 0; 
+   z-index: -1;
+}
+video{
+    width: 600px;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: -20% 50% 50% 50%;
+}
+.outside-text{
+    position: fixed;
+    left: -45%;
+    top: 0;
+    height: 90px;
+    width: 100%;
+    transform: rotate(-90deg);
+    z-index:99; 
+}
+.outside-text h2{
+    font-size: 70px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    white-space: nowrap;
+    animation: infiniteText 10s linear infinite;
+}
+@keyframes infiniteText{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+/* 
+
+mac studio wygląda absolutnie super ;p
+
+macbook pro 16 inch
+
+youtubers content creators // 
+
+*/
